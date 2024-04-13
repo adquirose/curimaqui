@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 16px;
+    --verde: #015a06;
+    --blanco:#FFFFFF; 
+    --gris:#4B4B4B;
+    --negro:#000000;
+  }
+  
+  body {
+    background: #F9F9F9;
+  }
+  
+  #root {
+    width: 100%;
+  }
+  .text-nav-blanco{
+    color:var(--blanco);
+  }
+  .text-nav-negro{
+    color:var(--negro);
+  }
+  nav li{
+    width: max-content;
+  }
+  @media screen and (max-width: 60rem){ /* 950px */
+    :root {
+        font-size: 14px;
+    }
+  }
