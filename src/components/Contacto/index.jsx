@@ -26,6 +26,7 @@ const Formulario = () => {
     }
     const handleOnSubmit = (e) => {
         e.preventDefault()
+
         const { nombre, email, telefono, mensaje } = data 
         const message = `
             <div>
@@ -54,6 +55,7 @@ const Formulario = () => {
                 setError('')
                 setMessage('sus datos han sido enviados')
                 setTimeout(() => setMessage(''),2000)
+                window.dataLayer.push({'event':'Formulario enviado'})
                 navigate('/gracias')
             })
             .catch(err => {
