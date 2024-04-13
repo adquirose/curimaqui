@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-import favicon from '../../assets/images/logo-color.png'
+import favicon from '../../assets/images/logo.png'
 const Gracias = () => {
     return(
         <>

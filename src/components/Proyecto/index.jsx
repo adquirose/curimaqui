@@ -1,7 +1,8 @@
 import { Container, Row, Col } from "reactstrap"
 import styled from "styled-components"
 import { ButtonHeader } from "../Header"
-const Section = styled.section`
+
+export const Section = styled.section`
     background-color:var(--gris);
     padding: 6rem 0;
 `

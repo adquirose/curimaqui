@@ -2,6 +2,7 @@ import Header from "./components/Header"
 import Masterplan from "./components/Masterplan"
 import Navigation from "./components/Navigation"
 import Proyecto from "./components/Proyecto"
+import Contacto from "./components/Contacto"
 import favicon from './assets/images/logo.png'
 import { Helmet } from "react-helmet"
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Header/>
       <Proyecto/>
       <Masterplan/>
+      <Contacto/>
     </>
   )
 }
