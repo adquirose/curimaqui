@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import { Section } from '../Proyecto'
 import { ButtonHeader } from '../Header'
 import TagManager from 'react-gtm-module'
+import { useNavigate } from 'react-router-dom'
 
 export const Titulo = styled.h2`
     font-size:2rem;
@@ -19,7 +20,8 @@ const Formulario = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState('')
     const [message, setMessage] = useState('')
-    
+    const navigate = useNavigate()
+
     const handleOnChange = (e) => {
         setData({...data, [e.target.name]: e.target.value})
     }
@@ -36,7 +38,8 @@ const Formulario = () => {
             </div>
         `
         const info = {
-            to:'adquirose@gmail.com',
+            to:'parcelascurimaqui@gmail.com',
+            cc:'adquirose@gmail.com',
             replyTo: email,
             subject:'Formulario Contacto',
             text:'Parcelas Curimaqui',
@@ -60,6 +63,7 @@ const Formulario = () => {
                         event:'pageview'
                     }
                 })
+                navigate('/gracias')
                 
             })
             .catch(err => {
