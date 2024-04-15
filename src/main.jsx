@@ -8,7 +8,7 @@ import './assets/css/index.css'
 import TagManager from 'react-gtm-module';
 
 const tagManagerArgs = {
-  gtmId:'GTM-PT2HDZ3F'
+  gtmId:'GTM-TWPQJ6X6'
 }
 TagManager.initialize(tagManagerArgs)
 

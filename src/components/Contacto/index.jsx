@@ -4,11 +4,11 @@ import { Container, Row, Col, Form, Input, FormGroup } from 'reactstrap'
 import styled from 'styled-components'
 import { Section } from '../Proyecto'
 import { ButtonHeader } from '../Header'
-import { useNavigate } from 'react-router-dom'
+import TagManager from 'react-gtm-module'
 
-const Titulo = styled.h2`
+export const Titulo = styled.h2`
     font-size:2rem;
-    color:var(--blanco);
+    color:${props => props.color ? props.color : 'var(--blanco)'};
     margin-bottom:1.25rem;
     text-align:center;
 `
@@ -19,8 +19,7 @@ const Formulario = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState('')
     const [message, setMessage] = useState('')
-    const navigate  = useNavigate()
-
+    
     const handleOnChange = (e) => {
         setData({...data, [e.target.name]: e.target.value})
     }
@@ -55,8 +54,13 @@ const Formulario = () => {
                 setError('')
                 setMessage('sus datos han sido enviados')
                 setTimeout(() => setMessage(''),2000)
-                window.dataLayer.push({'event':'Formulario enviado'})
-                navigate('/gracias')
+                TagManager.dataLayer({
+                    dataLayer:{
+                        path:'/gracias/',
+                        event:'pageview'
+                    }
+                })
+                
             })
             .catch(err => {
                 console.log(`ha ocurrido un error ${err}`)
@@ -124,7 +128,7 @@ const Formulario = () => {
 }
 const Contacto = () => {
     return(
-        <Section>
+        <Section id="contacto">
             <Container>
                 <Row>
                     <Col>

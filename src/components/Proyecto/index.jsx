@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { ButtonHeader } from "../Header"
 
 export const Section = styled.section`
-    background-color:var(--gris);
-    padding: 6rem 0;
+    background-color:${props => props.backgroundColor ? props.backgroundColor : 'var(--gris)'};
+    padding:5rem 0;
 `
 const H2 = styled.h2`
     font-size:2rem;
@@ -23,7 +23,7 @@ const Hr = styled.hr`
 `
 const Proyecto = () => {
     return(
-        <Section>
+        <Section id="proyecto">
             <Container>
                 <Row>
                     <Col lg="8" className="mx-auto text-center">
@@ -41,7 +41,7 @@ const Proyecto = () => {
                             ciudad de Cauquenes por camino asfaltado. Con rol propio, la mayoría de las parcelas 
                             supera los 10.000 m2, permitiendo la subdivisión en la mayoría de los casos.
                         </P>
-                        <ButtonHeader>Mira el Masterplan 360º</ButtonHeader>
+                        <ButtonHeader href="#masterplan">Mira el Masterplan 360º</ButtonHeader>
                     </Col>
                 </Row>
             </Container>

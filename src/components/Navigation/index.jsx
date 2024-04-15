@@ -58,30 +58,30 @@ const Navigation = () => {
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ms-auto" navbar>
                     <NavItem>
-                        <NavLink className={colorText}>PROYECTO</NavLink>
+                        <NavLink href="#proyecto" className={colorText}>PROYECTO</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className={colorText}>
+                        <NavLink href="#masterplan" className={colorText}>
                             MASTERPLAN 360º
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className={colorText}>
+                        <NavLink href="#galeria" className={colorText}>
                             GALERIA
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className={colorText}>
+                        <NavLink href="#video" className={colorText}>
                             VIDEO
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className={colorText}>
+                        <NavLink href="#ubicacion" className={colorText}>
                             UBICACIÓN
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink className={colorText}>
+                        <NavLink href="#contacto" className={colorText}>
                             CONTACTO
                         </NavLink>
                     </NavItem>

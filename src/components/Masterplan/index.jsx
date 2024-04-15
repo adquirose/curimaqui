@@ -7,7 +7,7 @@ const Section = styled.section`
 `
 const Masterplan = () => {
     return(
-        <Section>
+        <Section backgroundColor="var(--blanco)" id="masterplan">
             <Container>
                 <Row>
                     <Col>
