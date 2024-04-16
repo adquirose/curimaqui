@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import Img from './../../assets/images/header.jpg'
 import { Container, Row, Col, Button } from 'reactstrap'
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
     display:flex;
     position: relative;
     background-image: url(${Img});
-    height: 75vh;
+    height: ${props => props.$height? props.$height: '75vh'};
     min-height: 25rem;
     overflow: hidden;
     background-size: cover;
@@ -17,7 +17,7 @@ const HeaderContainer = styled.div`
         padding-bottom: 0;
     }
 `
-const H1 = styled.h1`
+export const H1 = styled.h1`
     font-size: 4.75rem;
     font-family: "adobe-arabic", sans-serif;
     font-weight: 400;
@@ -30,7 +30,7 @@ const H1 = styled.h1`
         font-size: 4.75rem !important;
     }
 `
-const P = styled.p`
+export const P = styled.p`
     font-family: "adobe-arabic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -76,19 +76,6 @@ const Header = () => {
                     </Col>
                 </Row>
             </Container>
-            {/* <div className="container my-auto">
-                <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h1 class="text-uppercase">
-                    <strong>Parcelas Curimaqui</strong>
-                    </h1>
-                    <hr>
-                </div>
-                <div class="col-lg-8 mx-auto">
-                    <p class="text-faded mb-4 mb-md-5">"Hogar entre viñedos y volcanes"</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#proyecto">Saber más</a>
-                </div>
-            </div> */}
         </HeaderContainer>
       
     )
