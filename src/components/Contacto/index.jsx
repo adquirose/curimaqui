@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Input, FormGroup } from 'reactstrap'
 import styled from 'styled-components'
 import { Section } from '../Proyecto'
 import { ButtonHeader } from '../Header'
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 import { useNavigate } from 'react-router-dom'
 
 export const Titulo = styled.h2`
@@ -63,12 +63,12 @@ const Formulario = () => {
                 setError('')
                 setMessage('sus datos han sido enviados')
                 setTimeout(() => setMessage(''),2000)
-                TagManager.dataLayer({
-                    dataLayer:{
-                        path:'/gracias/',
-                        event:'pageview'
-                    }
-                })
+                // TagManager.dataLayer({
+                //     dataLayer:{
+                //         path:'/gracias/',
+                //         event:'pageview'
+                //     }
+                // })
                 navigate('/gracias')
                 
             })
