@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { ButtonHeader } from "../Header"
 
 export const Section = styled.section`
-    background-color:${props => props.backgroundColor ? props.backgroundColor : 'var(--gris)'};
+    background:${props => props.$background? props.$background : 'gray'};
     padding:5rem 0;
 `
 const H2 = styled.h2`

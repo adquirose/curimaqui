@@ -12,6 +12,8 @@ import TagManager from "react-gtm-module"
 import Caracteristicas from "./components/Caracteristicas"
 import Plano from "./components/Plano"
 import Footer from "./components/Footer"
+import Rs from "./components/Rs"
+
 
 function App() {
   TagManager.dataLayer({
@@ -20,6 +22,7 @@ function App() {
       event:'pageview'
     }
   })
+
   return (
     <>
       <Helmet>
@@ -37,6 +40,7 @@ function App() {
       <Plano/>
       <Contacto/>
       <Footer/>
+      <Rs/>
     </>
   )
 }

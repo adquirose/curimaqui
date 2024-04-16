@@ -29,7 +29,7 @@ const Map = () => {
 
 const Ubicacion = () => {
     return(
-        <Section backgroundColor="var(--blanco)" id="ubicacion">
+        <Section $background="var(--blanco)" id="ubicacion">
             <Container>
                 <Row>
                     <Col>

@@ -11,7 +11,7 @@ const SuperVideo = styled.video`
 `
 const Video = () => {
     return(
-        <Section backgroundColor="var(--blanco)" id="video">
+        <Section $background="var(--blanco)" id="video">
             <Container>
                 <Row>
                     <Col>

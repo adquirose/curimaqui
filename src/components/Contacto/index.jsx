@@ -13,6 +13,13 @@ export const Titulo = styled.h2`
     margin-bottom:1.25rem;
     text-align:center;
 `
+const Textarea = styled(Input)`
+    height:174px;
+`
+const InputText = styled(Input)`
+    height:48px;
+`
+
 const INITIAL_STATE = {nombre:'', email:'', telefono:'', mensaje:''}
 
 const Formulario = () => {
@@ -39,7 +46,6 @@ const Formulario = () => {
         `
         const info = {
             to:'parcelascurimaqui@gmail.com',
-            cc:'adquirose@gmail.com',
             replyTo: email,
             subject:'Formulario Contacto',
             text:'Parcelas Curimaqui',
@@ -80,7 +86,7 @@ const Formulario = () => {
             <Row>
                 <Col md="6" sm="12">
                     <FormGroup>
-                        <Input 
+                        <InputText
                             type="text" 
                             placeholder="Nombre" 
                             name="nombre" 
@@ -89,7 +95,7 @@ const Formulario = () => {
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Input 
+                        <InputText 
                             type="email" 
                             placeholder="Email" 
                             name="email" 
@@ -98,7 +104,7 @@ const Formulario = () => {
                         />
                     </FormGroup>
                     <FormGroup>
-                        <Input 
+                        <InputText 
                             type="telefono" 
                             placeholder="Telefono" 
                             name="telefono" 
@@ -109,7 +115,7 @@ const Formulario = () => {
                 </Col>
                 <Col md="6" sm="12">
                     <FormGroup>
-                        <Input 
+                        <Textarea 
                             type="textarea" 
                             placeholder="Mensaje" 
                             name="mensaje" 

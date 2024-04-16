@@ -28,6 +28,9 @@
   nav li{
     width: max-content;
   }
+  .section-page{
+    padding-top: 100px;
+  }
   @media screen and (max-width: 60rem){ /* 950px */
     :root {
         font-size: 14px;

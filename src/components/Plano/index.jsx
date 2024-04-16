@@ -4,7 +4,7 @@ import { Titulo } from '../Contacto'
 import { ButtonHeader } from '../Header'
 const Plano = () => {
     return(
-        <Section backgroundColor="var(--verde)">
+        <Section $background="var(--verde)">
             <Container>
                 <Row>
                     <Col>

@@ -1,13 +1,9 @@
-import styled from 'styled-components'
 import { Container, Row, Col } from 'reactstrap'
+import { Section } from '../Proyecto'
 
-const Section = styled.section`
-    background-color:var(--blanco);
-    padding: 4rem 0;
-`
 const Masterplan = () => {
     return(
-        <Section backgroundColor="var(--blanco)" id="masterplan">
+        <Section $background="white" id="masterplan">
             <Container>
                 <Row>
                     <Col>

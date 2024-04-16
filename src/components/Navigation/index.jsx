@@ -8,9 +8,23 @@ import {
     NavItem,
     NavLink
   } from 'reactstrap';
+import styled from 'styled-components';
 import Logo from '../../assets/images/logo.png'
 import LogoColor from '../../assets/images/logo-color.png'
 import { PhoneCall, Email } from '../../Icons'
+
+const Image = styled.img`
+  width:240px;
+  @media(max-width:420px){
+    width:180px;
+  }
+`
+const Anchor = styled.a`
+    color:var(--negro);
+    font-size:1.25rem;
+    text-decoration:none;
+    padding:0 0.25rem;
+`
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +62,15 @@ const Navigation = () => {
     return(
         <Navbar container={true} fixed='top' color={colorNav} expand="lg" className='py-0'>
             <NavbarBrand href="/">
-                <img src={imgLogo} style={{height:'100px'}} alt="logo-curimaqui"/>
+                <Image src={imgLogo} alt="logo-curimaqui"/>
             </NavbarBrand>
             <div style={{width:'85px', display:'flex', justifyContent:'space-around'}}>
-                <PhoneCall width="32px" color={colorIcono}/>
-                <Email width="32px" color={colorIcono}/>
+                <Anchor href="tel:+56928140950">
+                    <PhoneCall width="32px" color={colorIcono}/>
+                </Anchor>
+                <Anchor href="mailto:parcelascurimaqui@gmail.com">
+                    <Email width="32px" color={colorIcono}/>
+                </Anchor>
             </div>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>

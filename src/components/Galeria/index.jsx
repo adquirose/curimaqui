@@ -1,35 +1,54 @@
+import { useState } from "react"; 
 import { Section } from "../Proyecto"
 import { Container, Row, Col } from "reactstrap"
 import { Titulo } from "../Contacto"
 import { Gallery } from "react-grid-gallery";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const images = [
     {
-       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-       width: 320,
-       height: 174,
-       isSelected: true,
-       caption: "After Rain (Jeshu John - designerspics.com)",
+       src: new URL('../../assets/images/galeria/1.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
     },
     {
-       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-       width: 320,
-       height: 212,
-       tags: [
-          { value: "Ocean", title: "Ocean" },
-          { value: "People", title: "People" },
-       ],
-       alt: "Boats (Jeshu John - designerspics.com)",
+        src: new URL('../../assets/images/galeria/2.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
     },
     {
-       src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-       width: 320,
-       height: 212,
+        src: new URL('../../assets/images/galeria/3.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
+    },
+    {
+        src: new URL('../../assets/images/galeria/4.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
+    },
+    {
+        src: new URL('../../assets/images/galeria/5.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
+    },
+    {
+        src: new URL('../../assets/images/galeria/6.jpg', import.meta.url).href,
+       width: 1280,
+       height: 720,
     },
  ];
+const slides = images.map(({ src, width, height }) => ({
+    src: src,
+    width,
+    height,
+}));
+
 const Galeria = () => {
+    const [index, setIndex] = useState(-1);
+    const handleClick = (index) => setIndex(index);
     return(
-        <Section backgroundColor="var(--blanco)" id="galeria">
+        <Section $background="var(--blanco)" id="galeria">
             <Container>
                 <Row>
                     <Col>
@@ -38,7 +57,13 @@ const Galeria = () => {
                 </Row>
                 <Row className="pt-4">
                     <Col>
-                        <Gallery images={images}/>
+                        <Gallery onClick={handleClick} images={images} enableImageSelection={false}/>
+                        <Lightbox
+                            slides={slides}
+                            open={index >= 0}
+                            index={index}
+                            close={() => setIndex(-1)}
+                        />
                     </Col>
                 </Row>
             </Container>

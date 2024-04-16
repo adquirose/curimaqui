@@ -14,6 +14,10 @@ import LogoInstagramBN from "./LogoInstagramBN";
 import LogoWhatsappBN from "./LogoWhatsappBN";
 import PhoneToolbar from "./PhoneToolbar";
 import DownArrow from "./DownArrow";
+import Plug from './Plug'
+import Mountain from "./Mountain";
+import Tree03 from "./Tree03";
+import BeachUmbrella from "./BeachUmbrella";
 
 export { 
     Hat3, 
@@ -28,5 +32,9 @@ export {
     Athletics, 
     InstantCamera, 
     LogoInstagram, LogoInstagramBN, LogoWhatsappBN, PhoneToolbar,
-    DownArrow 
+    DownArrow,
+    Plug,
+    Mountain,
+    Tree03,
+    BeachUmbrella
 }
