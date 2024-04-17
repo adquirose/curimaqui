@@ -129,7 +129,7 @@ const Formulario = () => {
                         {isLoading ? 'Enviando...' : 'Enviar Mensaje'}
                     </ButtonHeader>
                     <p style={{color:'white'}}>{message}</p>
-                    {error && `<p>${error}</p>`}
+                    {error && `${error}`}
                     
                 </Col>
             </Row>
