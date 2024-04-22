@@ -14,15 +14,24 @@ export const Titulo = styled.h2`
     text-align:center;
 `
 const Textarea = styled(Input)`
-    height:174px;
+    height:148px;
+    @media(max-width:576px){
+        height:90px;
+        font-size:12px
+    }
 `
 const InputText = styled(Input)`
-    height:48px;
+    height:38px;
+    
+    @media(max-width:576px){
+        height:28px;
+        font-size:12px
+    }
 `
 
 const INITIAL_STATE = {nombre:'', email:'', telefono:'', mensaje:''}
 
-const Formulario = () => {
+export const Formulario = () => {
     const [data, setData] = useState(INITIAL_STATE)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState('')
@@ -83,8 +92,8 @@ const Formulario = () => {
     const isDisabled = nombre === '' || email === '' || telefono === '' 
     return(
         <Form onSubmit={handleOnSubmit}>
-            <Row>
-                <Col md="6" sm="12">
+            <Row className='d-flex justify-content-center'>
+                <Col lg="6" md="6" sm="6" xs="10">
                     <FormGroup>
                         <InputText
                             type="text" 
@@ -113,7 +122,7 @@ const Formulario = () => {
                         />
                     </FormGroup>
                 </Col>
-                <Col md="6" sm="12">
+                <Col lg="6" md="6" sm="6" xs="10">
                     <FormGroup>
                         <Textarea 
                             type="textarea" 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Img from './../../assets/images/header.jpg'
 import { Container, Row, Col, Button } from 'reactstrap'
-
+import { Formulario } from '../Contacto'
 export const HeaderContainer = styled.div`
     display:flex;
     position: relative;
@@ -23,11 +23,14 @@ export const H1 = styled.h1`
     font-weight: 400;
     font-style: normal;
     text-shadow: 1px 1px 2px #212529, 0 0 1em #212529, 0 0 0.2em #212529;
-    padding-top: 120px;
+    padding-top: 90px;
     color:white;
     text-align:center;
     @media(min-width:992px){
         font-size: 4.75rem !important;
+    }
+    @media(max-width:576px){
+        font-size: 3.5rem !important;
     }
 `
 export const P = styled.p`
@@ -57,22 +60,21 @@ export const ButtonHeader = styled(Button)`
         border-color:${props => props.background ? props.background: 'white'}; 
         color:${props => props.color ? props.color: 'black'};
     }
+    
 `
 const Header = () => {
     return(
         <HeaderContainer>
             <Container className='my-auto'>
-                <Row>
+                <Row className='d-flex justify-content-center'>
                     <Col lg="10" className="mx-auto">
                         <H1>
                             <strong>PARCELAS CURIMAQUI</strong>
                         </H1>
-                    </Col>
-                    <Col lg="8" className='mx-auto'>
                         <P className="text-faded mb-4 mb-md-5">&quot;Hogar entre viñedos y volcanes&quot;</P>
-                        <div style={{display:'flex', justifyContent:'center'}}>
-                            <ButtonHeader color="var(--blanco)" background="var(--verde)" className="btn btn-primary btn-xl js-scroll-trigger" href="#proyecto">Saber más</ButtonHeader>
-                        </div>
+                    </Col>
+                    <Col lg="10" md="12" xs="12">
+                        <Formulario/>
                     </Col>
                 </Row>
             </Container>

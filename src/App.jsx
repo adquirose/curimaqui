@@ -5,7 +5,6 @@ import Masterplan from "./components/Masterplan"
 import Galeria from "./components/Galeria"
 import Ubicacion from "./components/Ubicacion"
 import Video from "./components/Video"
-import Contacto from "./components/Contacto"
 import favicon from './assets/images/logo.png'
 import { Helmet } from "react-helmet"
 // import TagManager from "react-gtm-module"
@@ -67,7 +66,6 @@ function App() {
       <Video/>
       <Ubicacion/>
       <Plano/>
-      <Contacto/>
       <Footer/>
       <Rs/>
     </>
