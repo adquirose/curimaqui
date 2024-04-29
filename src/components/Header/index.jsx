@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Img from './../../assets/images/header.jpg'
 import { Container, Row, Col, Button } from 'reactstrap'
 import { Formulario } from '../Contacto'
+
 export const HeaderContainer = styled.div`
     display:flex;
     position: relative;
