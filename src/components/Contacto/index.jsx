@@ -54,7 +54,7 @@ export const Formulario = () => {
             </div>
         `
         const info = {
-            to:'parcelascurimaqui@gmail.com',
+            to:'adquirose@gmail.com',
             replyTo: email,
             subject:'Formulario Contacto',
             text:'Parcelas Curimaqui',
